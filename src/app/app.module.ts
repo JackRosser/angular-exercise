@@ -8,6 +8,26 @@ import { HomeComponent } from './pages/home/home.component';
 import { ActivePostsComponent } from './pages/active-posts/active-posts.component';
 import { InactivePostsComponent } from './pages/inactive-posts/inactive-posts.component';
 import { PostDetailComponent } from './pages/post-detail/post-detail.component';
+import { Route, RouterModule } from '@angular/router';
+
+const routes:Route[] = [
+  {
+    path: "",
+    component: HomeComponent
+  },
+  {
+    path: "details",
+    component: PostDetailComponent
+  },
+  {
+    path: "active-posts",
+    component: ActivePostsComponent
+  },
+  {
+    path: "inactive-posts",
+    component: InactivePostsComponent
+  }
+]
 
 @NgModule({
   declarations: [
@@ -20,7 +40,8 @@ import { PostDetailComponent } from './pages/post-detail/post-detail.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
