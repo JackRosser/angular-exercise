@@ -1,1 +1,11 @@
-<p>home works!</p>
+<ng-container *ngIf="postEvidenza">
+  <h2>Post in evidenza</h2>
+  <h5>{{ postEvidenza.title }}</h5>
+  <h5>{{ postEvidenza.body }}</h5>
+  <button></button>
+  <h2>Potrebbero piacerti</h2>
+  <div *ngFor="let post of postArr">
+    <h5>{{ post.title }}</h5>
+    <button>Dettagli</button>
+  </div>
+</ng-container>
